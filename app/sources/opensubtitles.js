@@ -12,7 +12,9 @@ function search(file, lang) {
       filesize: file.size,
     })
     .then((subtitles) => {
-      if (!subtitles.length) reject('Empty result');
+      if (!subtitles.length) {
+        reject('Empty result');
+      }
       return subtitles;
     })
     .then(subtitles => ({

@@ -1,5 +1,6 @@
 html, body {
-  font-family: sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
   height: 100vh;
   margin: 0;
   box-sizing: border-box;
@@ -13,8 +14,12 @@ html, body {
   box-sizing: inherit;
 }
 
-.full-height {
-  height: 100%;
+.success {
+  color: #4CAF50;
+}
+
+.failure {
+  color: #F44336;
 }
 
 .vp-size {
@@ -36,16 +41,27 @@ html, body {
   margin-bottom: 10px;
 }
 
+.header {
+  height: 36px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
 .box {
   position: fixed;
+  top: 0;
+  left: 0;
   color: white;
-  background-color: rgba(0,0,0,.35);
-  border: 5px dashed white;
+  border: 2px dashed #eee;
+  transition: border .1s ease-out;
 }
 
 .box.active {
-  background-color: rgba(0,30,0,.7);
-  border: 5px solid green;
+  border: 2px solid #FF9800;
 }
 
 .box__icon {
@@ -53,17 +69,19 @@ html, body {
 }
 
 .results {
+  padding-top: 36px;
   min-height: 100vh;
-  background-color: rgba(0,0,0,.35);
-  padding: 15px;
-  font-size: 12px;
 }
 
 .results__item {
-  margin-bottom: 10px;
+  padding: 15px;
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.results__item:nth-child(odd) {
+  background-color: rgba(0,0,0,.25);
 }
 
 .results__item span:first-child {
@@ -75,6 +93,7 @@ html, body {
 .results__item span:last-child {
   position: relative;
   display: inline-block;
+  margin-left: 8px;
   width: 16px;
   height: 16px;
 }
