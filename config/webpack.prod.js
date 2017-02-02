@@ -1,6 +1,6 @@
-var path = require('path');
-var webpack = require('webpack');
-var base = require('./webpack.base');
+const path = require('path');
+const webpack = require('webpack');
+const base = require('./webpack.base');
 
 module.exports = {
   entry: './app/main',
@@ -13,8 +13,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
+        NODE_ENV: JSON.stringify('production'),
+      },
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
@@ -22,8 +22,8 @@ module.exports = {
       compress: {
         warnings: false,
         drop_console: true,
-      }
-    })
+      },
+    }),
   ],
   resolve: base.resolve,
   module: base.module,

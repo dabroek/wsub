@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import SpinJS from 'spin.js';
 
 class Spinner extends Component {
-  
+
   componentDidMount() {
     const { color, config } = this.props;
     const spinConfig = {
@@ -25,7 +25,7 @@ class Spinner extends Component {
   }
 
   render() {
-    return <span ref="container"/>;
+    return <span ref="container" />;
   }
 }
 
@@ -34,11 +34,11 @@ Spinner.propTypes = {
   config: PropTypes.object,
   // This is a quick way to overwrite just the color on the config
   color: PropTypes.string.isRequired,
-}
+};
 
 Spinner.defaultProps = {
   config: {},
   color: 'black',
-}
+};
 
-export default Spinner
+export default Spinner;

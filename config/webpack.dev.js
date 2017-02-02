@@ -1,6 +1,6 @@
-var path = require('path');
-var webpack = require('webpack');
-var base = require('./webpack.base');
+const path = require('path');
+const webpack = require('webpack');
+const base = require('./webpack.base');
 
 module.exports = {
   target: 'electron',
@@ -8,19 +8,19 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './app/main'
+    './app/main',
   ],
   output: {
     path: path.resolve(__dirname, '../app'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('development')
-      }
+        NODE_ENV: JSON.stringify('development'),
+      },
     }),
   ],
   resolve: base.resolve,

@@ -1,26 +1,26 @@
 module.exports = {
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
   },
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel']
+        loaders: ['babel'],
       },
       {
         test: /\.json$/,
-        loaders: ['json']
+        loaders: ['json'],
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css']
+        loaders: ['style', 'css'],
       },
       {
         test: /\.jpg|\.png|\.ttf|\.eot|\.woff|\.svg/,
-        loaders: ['file']
-      }
-    ]
+        loaders: ['file'],
+      },
+    ],
   },
 };
